@@ -1,0 +1,17 @@
+# Mac
+.DS_Store
+
+# Build
+build
+dist
+
+# Node
+node_modules
+npm-debug.log
+
+# Bower
+bower_components
+demo/lib
+
+# Coverage files
+coverage
