@@ -58,7 +58,7 @@ gulp.task('travis', function () {
       configFile: 'karma.conf.js',
       action: 'run',
       reporters: ['dots', 'coverage', 'coveralls'],
-      browsers: ['Chrome'],
+      browsers: ['Firefox'],
       preprocessors: {
         'src/**/*.js': ['coverage']
       },
