@@ -1,5 +1,7 @@
 # ngNephila
 
+[![Build Status](https://secure.travis-ci.org/nephila/ng-nephila.svg)](https://travis-ci.org/nephila/ng-nephila) [![Coverage Status](https://coveralls.io/repos/nephila/ng-nephila/badge.svg?branch=master)](https://coveralls.io/r/nephila/ng-nephila?branch=master)
+
 Collection of reusable components for [AngularJS](https://angularjs.org/)
 
 ## Quick start
