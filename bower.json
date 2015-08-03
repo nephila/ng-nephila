@@ -1,0 +1,28 @@
+{
+  "name": "ng-nephila",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nephila/ng-nephila",
+  "authors": [
+    {
+      "name": "Nephila",
+      "homepage": "http://nephila.it"
+    }
+  ],
+  "description": "Collection of reusable UI components for AngularJS.",
+  "devDependencies": {
+    "angular": "^1.4.1",
+    "angular-mocks": "^1.4.1"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "coverage",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "angular": ">=1"
+  }
+}
