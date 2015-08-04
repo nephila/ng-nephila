@@ -12,6 +12,8 @@
   "browser": true,
   "globals": {
     "angular": true,
+    "console": true,
+    "spyOn": true,
     "describe" : false,
     "it" : false,
     "inject": false,

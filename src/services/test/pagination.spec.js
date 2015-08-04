@@ -50,7 +50,7 @@ describe('Service: pagination', function () {
       paginator.next();
     }
     expect(paginator.getCurrentPage()).toEqual(2);
-    for (var i = 0 ; i < 40 ; i++) {
+    for (i = 0 ; i < 40 ; i++) {
       paginator.prev();
     }
     expect(paginator.getCurrentPage()).toEqual(0);
