@@ -22,6 +22,8 @@ module.exports = {
   pluginFiles: [
     'src/module.js',
     'src/filters/*.js',
+    'src/services/*.js',
+    'src/components/*.js',
   ],
 
   versionData: {
