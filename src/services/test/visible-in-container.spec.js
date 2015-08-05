@@ -21,7 +21,7 @@ describe('Service: visible-in-container', function () {
         return {
           top: 4000,
           bottom: 4000
-        }
+        };
       }
     };
     expect(visibleInContainer(element, container)).toEqual(false);
@@ -36,7 +36,7 @@ describe('Service: visible-in-container', function () {
         return {
           top: 400,
           bottom: 400
-        }
+        };
       }
     };
     expect(visibleInContainer(element, container)).toEqual(true);

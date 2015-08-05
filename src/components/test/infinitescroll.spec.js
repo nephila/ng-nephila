@@ -10,7 +10,7 @@ describe('Component: infinite-scroll', function() {
     $timeout = _$timeout_;
     $window = _$window_;
 
-    element = angular.element("<div infinite-scroll on-infinite='callbacks.loadMore()' ng-if='callbacks.moreDataCanBeLoaded()'>Inf</div>");
+    element = angular.element('<div infinite-scroll on-infinite="callbacks.loadMore()" ng-if="callbacks.moreDataCanBeLoaded()">Inf</div>');
     $scope.callbacks = {
       loadMore: function() {
       },
