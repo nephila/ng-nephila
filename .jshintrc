@@ -11,6 +11,7 @@
   "undef": true,
   "browser": true,
   "globals": {
+    "$": true,
     "angular": true,
     "console": true,
     "spyOn": true,
