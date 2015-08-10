@@ -16,6 +16,7 @@ var testFiles = [
   'bower_components/angular/angular.min.js',
   'bower_components/angular-mocks/angular-mocks.js',
   'src/**/*.js',
+  'template/**/*.html'
 ];
 
 gulp.task('test', function () {
@@ -28,6 +29,10 @@ gulp.task('test', function () {
 });
 
 gulp.task('build', function () {
+
+  gulp.src(buildConfig.templateFiles)
+  .pipe(gulp.dest(buildConfig.demo.ngNephilaTemplates));
+
   return gulp.src(buildConfig.pluginFiles)
     .pipe(concat('ng-nephila.js'))
     .pipe(header(buildConfig.closureStart))
@@ -59,9 +64,6 @@ gulp.task('travis', function () {
       action: 'run',
       reporters: ['dots', 'coverage', 'coveralls'],
       browsers: ['Firefox'],
-      preprocessors: {
-        'src/**/*.js': ['coverage']
-      },
       coverageReporter: {
         type: 'lcov',
         dir: 'coverage/',

@@ -15,9 +15,14 @@ module.exports = {
   dist: 'dist',
   demo : {
     ngNephila : 'demo/lib/ngNephila/dist',
+    ngNephilaTemplates : 'demo/template',
     lib : 'demo/lib',
     www : 'demo'
   },
+
+  templateFiles: [
+    'template/**/*.html',
+  ],
 
   pluginFiles: [
     'src/module.js',

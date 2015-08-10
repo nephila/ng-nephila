@@ -14,11 +14,7 @@
   <div>Titlecase {{myText}} -> {{myText|titlecase}}</div>
   <div>Titlecase {{myText}} -> {{myText|titlecase:true}}</div>
   <div class="pagination">
-    <ul>
-      <li ng-repeat="i in paginator.getNumberOfPages() | range">
-          <a href="" ng-click="paginator.goToPage(i)">{{i+1}}</a>
-      </li>
-    </ul>
+    <paginator start="1" number-of-items="numberOfItems" on-page-change="pageChange"></paginator>
   </div>
   <div style="margin-top: 1200px;" infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded()">Ciao</div>
 </body>

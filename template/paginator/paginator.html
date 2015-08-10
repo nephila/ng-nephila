@@ -1,0 +1,11 @@
+<ul>
+  <li>
+    <a href="" ng-click="paginator.prev()">&lt;&lt;</a>
+  </li>
+  <li ng-class="{active: i == paginator.getCurrentPage()}" ng-repeat="i in pages">
+    <a href="" ng-click="paginator.goToPage(i)">{{i+1}}</a>
+  </li>
+  <li>
+    <a href="" ng-click="paginator.next()">&gt;&gt;</a>
+  </li>
+</ul>

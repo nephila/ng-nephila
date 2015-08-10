@@ -1,6 +1,11 @@
 module.exports = function(config) {
   config.set({
 
+    preprocessors: {
+      'src/**/*.js': ['coverage'],
+      'template/**/*.html': 'ng-html2js'
+    },
+
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '.',
 
@@ -31,6 +36,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: false,
+
   });
 };

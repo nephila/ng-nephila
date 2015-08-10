@@ -13,7 +13,6 @@
   "globals": {
     "$": true,
     "angular": true,
-    "console": true,
     "spyOn": true,
     "describe" : false,
     "it" : false,
