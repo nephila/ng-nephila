@@ -16,7 +16,7 @@
   <div class="pagination">
     <paginator start="1" number-of-items="numberOfItems" on-page-change="pageChange(page)"></paginator>
   </div>
-  <div style="margin-top: 1200px;" infinite-scroll on-infinite="loadMore()" ng-if="moreDataCanBeLoaded()">Ciao</div>
+  <infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()" ng-if="moreDataCanBeLoaded()"></infinite-scroll>
 </body>
 
 </html>
