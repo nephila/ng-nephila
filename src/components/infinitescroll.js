@@ -4,6 +4,7 @@ angular.module('ngNephila.components.infinitescroll', [
 .directive('infiniteScroll', [
   '$window', 'visibleInContainer', function($window, visibleInContainer) {
     return {
+      restrict: 'E',
       scope: {
         onInfinite: '&',
         ngIf: '&',
