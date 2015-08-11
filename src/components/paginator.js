@@ -5,6 +5,7 @@ angular.module('ngNephila.components.paginator', [
 .directive('paginator', [
   '$filter', 'pagination', function($filter, pagination) {
     return {
+      restrict: 'E',
       scope: {
         onPageChange: '=',
         numberOfItems: '=',
