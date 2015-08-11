@@ -7,7 +7,7 @@ angular.module('ngNephila.components.paginator', [
     return {
       restrict: 'E',
       scope: {
-        onPageChange: '=',
+        onPageChange: '&',
         numberOfItems: '=',
         start: '=',
       },
@@ -15,7 +15,9 @@ angular.module('ngNephila.components.paginator', [
       controller: ['$scope', function ( $scope ) {
         $scope.paginator = pagination.getPaginator();
         $scope.paginator.setNumberOfItems(parseInt($scope.numberOfItems));
-        $scope.paginator.onPageChange($scope.onPageChange);
+        $scope.paginator.onPageChange(function (page) {
+          $scope.onPageChange({page: page});
+        });
         $scope.pages = $filter('range')($scope.paginator.getNumberOfPages());
         $scope.paginator.goToPage(parseInt($scope.start));
       }],
