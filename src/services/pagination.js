@@ -17,7 +17,7 @@ angular.module('ngNephila.services.pagination', [])
 
     var numberOfItems;
     var pageChange = function(page) {};
-    var currentPage = 0;
+    var currentPage = 1;
 
     this.onPageChange = function (pageChangeFunc) {
       pageChange = pageChangeFunc;
@@ -28,7 +28,7 @@ angular.module('ngNephila.services.pagination', [])
     };
 
     this.goToPage = function (page) {
-      if (page >= this.getNumberOfPages()) {
+      if (page < 1 || page > this.getNumberOfPages()) {
         throw new Error('Wrong page to go to');
       }
       currentPage = page;
@@ -36,14 +36,14 @@ angular.module('ngNephila.services.pagination', [])
     };
 
     this.next = function () {
-      if (currentPage + 1 < this.getNumberOfPages()) {
+      if (currentPage + 1 <= this.getNumberOfPages()) {
         currentPage++;
       }
       pageChange(currentPage);
     };
 
     this.prev = function () {
-      if (currentPage - 1 >= 0) {
+      if (currentPage - 1 > 0) {
         currentPage--;
       }
       pageChange(currentPage);

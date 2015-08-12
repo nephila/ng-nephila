@@ -49,11 +49,11 @@ describe('Service: pagination', function () {
     for (var i = 0 ; i < 10 ; i++) {
       paginator.next();
     }
-    expect(paginator.getCurrentPage()).toEqual(2);
+    expect(paginator.getCurrentPage()).toEqual(3);
     for (i = 0 ; i < 40 ; i++) {
       paginator.prev();
     }
-    expect(paginator.getCurrentPage()).toEqual(0);
+    expect(paginator.getCurrentPage()).toEqual(1);
     expect(function() {
       paginator.goToPage(45);
     }).toThrow();

@@ -18,13 +18,13 @@ angular.module('ngNephila.components.paginator', [
         $scope.paginator.onPageChange(function (page) {
           $scope.onPageChange({page: page});
         });
-        $scope.pages = $filter('range')($scope.paginator.getNumberOfPages());
+        $scope.pages = $filter('range')(1, 1 + $scope.paginator.getNumberOfPages());
         $scope.paginator.goToPage(parseInt($scope.start));
       }],
       link: function(scope, elem, attrs) {
         scope.$watch('numberOfItems', function(newValue, oldValue) {
           scope.paginator.setNumberOfItems(parseInt(newValue));
-          scope.pages = $filter('range')(scope.paginator.getNumberOfPages());
+          scope.pages = $filter('range')(1, 1 + scope.paginator.getNumberOfPages());
         });
       }
     };
