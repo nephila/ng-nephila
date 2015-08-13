@@ -23,6 +23,15 @@ describe('Service: debounce', function () {
     expect(counter).toBe(0);
   });
 
+  it('should execute immediately', function(){
+    var counter = 0;
+    var incr = debounce(function(){
+      counter += 1;
+    }, 100, true);
+    incr();
+    expect(counter).toBe(1);
+  });
+
   it('should execute after delay', function(){
     var counter = 0;
     var incr = debounce(function(){
