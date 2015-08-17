@@ -1,11 +1,14 @@
 angular.module('ngNephila.components.toggle',[])
-.directive('toggle', function () {
+.directive('toggle', ['$rootScope', function($rootScope) {
   return {
     scope: {
       state: '=',
     },
     link: function(scope, element, attrs) {
       var toggleClass = attrs.toggleClass;
+      var toggleState = function() {
+        scope.state = !scope.state;
+      };
       if (!toggleClass) {
         toggleClass = 'active';
       }
@@ -16,7 +19,12 @@ angular.module('ngNephila.components.toggle',[])
       }
       element.bind('click', function() {
         element.toggleClass(toggleClass);
+        if (scope.$$phase || $rootScope.$$phase) {
+          scope.toggleState();
+        } else {
+          scope.$apply(toggleState);
+        }
       });
     }
   };
-});
+}]);

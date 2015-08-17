@@ -35,4 +35,15 @@ describe('Component: toggle', function() {
     expect($(element).attr('class').indexOf('boom') >= 0).toEqual(false);
   });
 
+  it('should change the internal state', function () {
+    element = angular.element('<div toggle state="true">Toggle</div>');
+    element = $compile(element)($scope);
+    $scope.$digest();
+    var isolated = element.isolateScope();
+    $(element).trigger('click');
+    expect(isolated.state).toBe(false);
+    $(element).trigger('click');
+    expect(isolated.state).toBe(true);
+  });
+
 });
