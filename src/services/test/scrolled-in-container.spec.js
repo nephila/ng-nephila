@@ -116,12 +116,12 @@ describe('Service: scrolled-in-container', function () {
     element.style = {
       opacity: 10,
       visibility: 'hidden'
-    }
+    };
     expect(scrolledInContainer(element, container)).toEqual(false);
 
     element.style = {
       opacity: 0
-    }
+    };
     expect(scrolledInContainer(element, container)).toEqual(false);
 
   });

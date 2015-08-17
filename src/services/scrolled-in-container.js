@@ -11,11 +11,11 @@ angular.module('ngNephila.services.scrolledInContainer', [])
     }
 
     if (!container.getBoundingClientRect) {
-      return elementBox.top >= 0 && elementBox.bottom <= container.innerHeight;
+      return (elementBox.top >= 0 && elementBox.bottom <= container.innerHeight);
     }
 
     var containerBox = container.getBoundingClientRect();
 
-    return !(elementBox.bottom > containerBox.bottom);
+    return (elementBox.bottom <= containerBox.bottom);
   };
 });
