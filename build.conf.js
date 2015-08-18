@@ -15,7 +15,6 @@ module.exports = {
   dist: 'dist',
   demo : {
     ngNephila : 'demo/lib/ngNephila/dist',
-    ngNephilaTemplates : 'demo/template',
     lib : 'demo/lib',
     www : 'demo'
   },
@@ -29,6 +28,7 @@ module.exports = {
     'src/filters/*.js',
     'src/services/*.js',
     'src/components/*.js',
+    'template/**/*.html.js'
   ],
 
   versionData: {

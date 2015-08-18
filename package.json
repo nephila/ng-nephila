@@ -16,6 +16,7 @@
     "gulp-jscs": "^1.6.0",
     "gulp-jshint": "^1.6.1",
     "gulp-karma": "0.0.4",
+    "gulp-ng-html2js": "^0.2.0",
     "gulp-prettify": "^0.3.0",
     "gulp-rename": "^1.2.0",
     "gulp-shell": "^0.2.10",
@@ -29,7 +30,8 @@
     "karma-jasmine": "~0.1.5",
     "karma-ng-html2js-preprocessor": "^0.1.2",
     "karma-phantomjs-launcher": "~0.1.2",
-    "minimist": "^0.1.0"
+    "minimist": "^0.1.0",
+    "run-sequence": "^1.1.2"
   },
   "licenses": [
     {
