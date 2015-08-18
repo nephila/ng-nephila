@@ -15,3 +15,6 @@ demo/lib
 
 # Coverage files
 coverage
+
+# Template
+template/**/*.js

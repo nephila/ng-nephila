@@ -3,7 +3,6 @@ describe('Component: paginator', function() {
   var element, pProvider, $scope, $compile;
 
   beforeEach(module('ngNephila.components.paginator'));
-  beforeEach(module('template/paginator/paginator.html'));
 
   beforeEach(function(){
     module(function(paginationProvider){

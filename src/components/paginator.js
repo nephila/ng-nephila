@@ -1,6 +1,7 @@
 angular.module('ngNephila.components.paginator', [
   'ngNephila.services.pagination',
-  'ngNephila.filters.range'
+  'ngNephila.filters.range',
+  'ngNephila.tpls.paginator.paginator'
 ])
 .directive('paginator', [
   '$filter', 'pagination', function($filter, pagination) {

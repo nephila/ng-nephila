@@ -7,16 +7,18 @@ var header = require('gulp-header');
 var concat = concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
+var html2js = require('gulp-ng-html2js');
 var rename = require('gulp-rename');
 var buildConfig = require('./build.conf');
 var del = require('del');
+var runSequence = require('run-sequence');
 
 var testFiles = [
   'bower_components/jquery/dist/jquery.min.js',
   'bower_components/angular/angular.min.js',
   'bower_components/angular-mocks/angular-mocks.js',
   'src/**/*.js',
-  'template/**/*.html'
+  'template/**/*.html.js'
 ];
 
 gulp.task('test', function () {
@@ -28,11 +30,25 @@ gulp.task('test', function () {
     }));
 });
 
-gulp.task('build', function () {
+gulp.task('html2js', function () {
+  return gulp.src('template/**/*.html')
+    .pipe(html2js({
+      moduleName: function (file) {
+        var path = file.path.split('/'),
+            folder = path[path.length - 2],
+            fileName = path[path.length - 1].split('.')[0];
+        var name = 'ngNephila.tpls.' + folder;
+        return name + '.' + fileName;
+      },
+      prefix: "template/"
+    }))
+    .pipe(rename({
+      extname: ".html.js"
+    }))
+    .pipe(gulp.dest('template'))
+});
 
-  gulp.src(buildConfig.templateFiles)
-  .pipe(gulp.dest(buildConfig.demo.ngNephilaTemplates));
-
+gulp.task('build-dist', function () {
   return gulp.src(buildConfig.pluginFiles)
     .pipe(concat('ng-nephila.js'))
     .pipe(header(buildConfig.closureStart))
@@ -47,6 +63,12 @@ gulp.task('build', function () {
     .pipe(gulp.dest(buildConfig.demo.ngNephila));
 });
 
+gulp.task('build', function () {
+  runSequence('clean',
+              'html2js',
+              'build-dist');
+});
+
 gulp.task('jshint', function () {
   return gulp.src('src/**/*.js')
     .pipe(jshint())
@@ -54,7 +76,7 @@ gulp.task('jshint', function () {
 });
 
 gulp.task('clean', function () {
-  return del('dist');
+  return del(['dist', 'template/**/*.html.js']);
 });
 
 gulp.task('travis', function () {
