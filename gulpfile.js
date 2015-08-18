@@ -21,13 +21,18 @@ var testFiles = [
   'template/**/*.html.js'
 ];
 
-gulp.task('test', function () {
+gulp.task('test-src', function () {
   return gulp.src(testFiles)
     .pipe(karma({
       configFile: 'karma.conf.js',
       action: 'run',
       browsers: ['Chrome']
     }));
+});
+
+gulp.task('test', function () {
+  runSequence('html2js',
+              'test-src');
 });
 
 gulp.task('html2js', function () {
@@ -79,7 +84,7 @@ gulp.task('clean', function () {
   return del(['dist', 'template/**/*.html.js']);
 });
 
-gulp.task('travis', function () {
+gulp.task('travis-src', function () {
   return gulp.src(testFiles)
     .pipe(karma({
       configFile: 'karma.conf.js',
@@ -92,4 +97,9 @@ gulp.task('travis', function () {
         subdir: '.',
       }
     }));
+});
+
+gulp.task('travis', function () {
+  runSequence('html2js',
+              'travis-src');
 });
