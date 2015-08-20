@@ -11,7 +11,10 @@ angular.module('ngNephila.components.paginator', [
         onPageChange: '&',
         numberOfItems: '=',
         start: '=',
-        compress: '@'
+        compress: '@',
+        prevLabel: '@',
+        nextLabel: '@',
+        compressLabel: '@'
       },
       templateUrl: 'template/paginator/paginator.html',
       controller: ['$scope', function ( $scope ) {
