@@ -106,4 +106,18 @@ describe('Component: paginator', function() {
     checkVisibilityRange(isolated.pagesVisibility, 1, 20 ,true);
   });
 
+  it('should not hide a single element between 2 visible elements', function () {
+    pProvider.setItemsPerPage(5);
+    $scope.nitems = 100;
+    $scope.pageChange = function(page) {};
+    element = angular.element('<paginator start="1" compress="2" number-of-items="nitems" on-page-change="pageChange"></paginator>');
+    element = $compile(element)($scope);
+    $scope.$digest();
+    var isolated = element.isolateScope();
+    isolated.paginator.goToPage(6);
+    checkVisibilityRange(isolated.pagesVisibility, 1, 6 ,true);
+    isolated.paginator.goToPage(15);
+    checkVisibilityRange(isolated.pagesVisibility, 13, 20 ,true);
+  });
+
 });
