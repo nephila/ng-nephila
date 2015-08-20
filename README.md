@@ -4,6 +4,10 @@
 
 Collection of reusable components for [AngularJS](https://angularjs.org/)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/astagi/mystatics/master/ng-nephila/ngnephila-small.png"/>
+</p>
+
 ## Quick start
 
 Include the required bower component:
