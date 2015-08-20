@@ -15,4 +15,4 @@ before_script:
   - bower install
 
 script:
-  - gulp jshint travis
+  - gulp travis

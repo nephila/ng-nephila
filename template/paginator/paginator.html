@@ -1,11 +1,12 @@
 <ul>
   <li>
-    <a href="" ng-click="paginator.prev()">&lt;&lt;</a>
+    <a href="" ng-click="paginator.prev()">{{prevLabel || "&lt;&lt;"}}</a>
   </li>
-  <li ng-class="{active: i == paginator.getCurrentPage()}" ng-repeat="i in pages">
-    <a href="" ng-click="paginator.goToPage(i)">{{i}}</a>
+  <li ng-hide="canHide(i)" ng-class="{active: i == paginator.getCurrentPage()}" ng-repeat="i in pages">
+    <a href="" ng-hide="isFirstCanHide(i)" ng-click="paginator.goToPage(i)">{{i}}</a>
+    <span ng-show="isFirstCanHide(i)">{{compressLabel || "..."}}</span>
   </li>
   <li>
-    <a href="" ng-click="paginator.next()">&gt;&gt;</a>
+    <a href="" ng-click="paginator.next()">{{nextLabel || "&gt;&gt;"}}</a>
   </li>
 </ul>

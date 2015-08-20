@@ -32,6 +32,7 @@ gulp.task('test-src', function () {
 
 gulp.task('test', function () {
   runSequence('html2js',
+              'jshint',
               'test-src');
 });
 
@@ -101,5 +102,6 @@ gulp.task('travis-src', function () {
 
 gulp.task('travis', function () {
   runSequence('html2js',
+              'jshint',
               'travis-src');
 });

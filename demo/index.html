@@ -5,7 +5,7 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>ng-nephila demo</title>
   <script src="lib/angular/angular.min.js"></script>
-  <script src="lib/ngNephila/dist/ng-nephila.min.js"></script>
+  <script src="lib/ngNephila/dist/ng-nephila.js"></script>
   <script src="js/app.js"></script>
 
 </head>
@@ -18,7 +18,7 @@
     <infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()" scroll-container="scrollContainer"><div>Loading inside container...</div></infinite-scroll>
   </div>
   <div class="pagination">
-    <paginator start="1" number-of-items="numberOfItems" on-page-change="pageChange(page)"></paginator>
+    <paginator start="1" compress="2" number-of-items="numberOfItems" on-page-change="pageChange(page)" next-label="Next" prev-label="Prev." compress-label="...."></paginator>
   </div>
   <infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()"><div>Loading inside container...</div></infinite-scroll>
 </body>
