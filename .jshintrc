@@ -12,6 +12,7 @@
   "browser": true,
   "globals": {
     "$": true,
+    "moment": true,
     "angular": true,
     "spyOn": true,
     "describe" : false,

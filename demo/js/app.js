@@ -27,4 +27,5 @@ app.controller('demoCtrl', function($scope, $timeout, pagination) {
       alert("BAH, " + page);
     }, 1000);
   }
+  $scope.myDate = new Date();
 });
