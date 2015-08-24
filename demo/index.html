@@ -16,7 +16,7 @@
   <div>Titlecase {{myText}} -> {{myText|titlecase:true}}</div>
   <div toggle>Toggle Button</div>
   <div>My date {{myDate}}</div>
-  <date-picker ng-model="myDate" locale="it" format="DD.MM.YYYY" view-format="DD MMMM YYYY"></date-picker>
+  <date-picker ng-model="myDate" locale="it" view-format="DD MMMM YYYY"></date-picker>
   <div id="innerscroll" style="overflow-y: scroll; height:400px;">
     <infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()" scroll-container="scrollContainer"><div>Loading inside container...</div></infinite-scroll>
   </div>

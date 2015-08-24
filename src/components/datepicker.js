@@ -9,7 +9,6 @@ angular.module('ngNephila.components.datePicker', [
     },
     link: function (scope, element, attrs) {
 
-      scope.format = attrs.format || 'YYYY-MM-DD';
       scope.viewFormat = attrs.viewFormat || 'DD MMMM YYYY';
       scope.locale = attrs.locale || 'en';
       scope.firstWeekDaySunday = scope.$eval(attrs.firstWeekDaySunday) || false;
