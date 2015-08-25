@@ -2,7 +2,8 @@ describe('Component: datePicker', function() {
 
   var element, isolated, $scope, $compile, $timeout, $document;
 
-  var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+  var monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
 
@@ -73,6 +74,16 @@ describe('Component: datePicker', function() {
     isolated.showCalendar();
     expect(isolated.calendarOpened).toEqual(true);
     isolated.closeCalendar();
+    expect(isolated.calendarOpened).toEqual(false);
+  });
+
+  it('should close calendar on $document click', function () {
+    element = $compile(element)($scope);
+    $scope.$digest();
+    isolated = element.isolateScope();
+    isolated.showCalendar();
+    expect(isolated.calendarOpened).toEqual(true);
+    $document.trigger('click');
     expect(isolated.calendarOpened).toEqual(false);
   });
 
