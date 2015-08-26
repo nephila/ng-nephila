@@ -1,5 +1,5 @@
 angular.module('ngNephila.services.tts', [])
-.factory('tts', ['$timeout', '$q', function($timeout, $q) {
+.factory('tts', ['$q', function($q) {
   var ready = false;
   var readyCallback;
   var q;
