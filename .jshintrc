@@ -12,6 +12,8 @@
   "browser": true,
   "globals": {
     "$": true,
+    "responsiveVoice": true,
+    "jasmine": true,
     "angular": true,
     "spyOn": true,
     "describe" : false,

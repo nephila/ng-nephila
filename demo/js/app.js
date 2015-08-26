@@ -4,12 +4,12 @@ app.config(function(paginationProvider) {
   paginationProvider.setItemsPerPage(5);
 });
 
-app.controller('demoCtrl', function($scope, $timeout, pagination) {
+app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
   $scope.myText = 'the last good day of the year';
   $scope.loadCount = 0;
   $scope.loadingShow = true;
   $scope.scrollContainer = document.getElementById('innerscroll');
-  console.log($scope.scrollContainer);
+
   $scope.loadMore = function() {
     alert("Load more!");
     $scope.loadCount++;
@@ -17,9 +17,24 @@ app.controller('demoCtrl', function($scope, $timeout, pagination) {
       $scope.loadingShow = false;
     }
   }
+
+  $scope.startSpeaking = function() {
+    tts.speak("Hi man! How are you? Hope fine!")
+    .then(function() {
+      console.log("SPEAK DONE!");
+    }, function(err) {
+
+    });
+  }
+
+  $scope.stopSpeaking = function() {
+    tts.stop();
+  }
+
   $scope.moreDataCanBeLoaded = function() {
     return $scope.loadCount < 2;
   }
+
   $scope.pageChange = function(page) {
     $timeout(function() {
       $scope.numberOfItems = 100;
