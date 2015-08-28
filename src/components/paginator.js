@@ -16,7 +16,9 @@ angular.module('ngNephila.components.paginator', [
         nextLabel: '@',
         compressLabel: '@'
       },
-      templateUrl: 'template/paginator/paginator.html',
+      templateUrl: function(elem,attrs) {
+        return attrs.templateUrl || 'template/paginator/paginator.html';
+      },
       controller: ['$scope', function ( $scope ) {
         $scope.pagesVisibility = [];
         $scope.paginator = pagination.getPaginator();

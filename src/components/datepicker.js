@@ -127,7 +127,9 @@ angular.module('ngNephila.components.datePicker', [
       });
 
     },
-    templateUrl: 'template/datepicker/datepicker.html'
+    templateUrl: function(elem,attrs) {
+      return attrs.templateUrl || 'template/datepicker/datepicker.html';
+    }
   };
 
 }]);
