@@ -14,6 +14,7 @@
     "$": true,
     "responsiveVoice": true,
     "jasmine": true,
+    "moment": true,
     "angular": true,
     "spyOn": true,
     "describe" : false,

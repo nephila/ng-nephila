@@ -1,0 +1,26 @@
+<div>
+    <input type="text" ng-focus="showCalendar()" ng-value="viewValue" class="datepicker-input" placeholder="{{ placeholder }}"/>
+</div>
+<div class="datepicker" ng-show="calendarOpened">
+  <div class="controls">
+    <div class="left">
+      <i class="prev-year-btn" ng-click="prevYear()"></i>
+      <i class="prev-month-btn" ng-click="prevMonth()"></i>
+    </div>
+    <span class="date" ng-bind="dateValue"></span>
+    <div class="right">
+      <i class="next-month-btn" ng-click="nextMonth()"></i>
+      <i class="next-year-btn" ng-click="nextYear()"></i>
+    </div>
+  </div>
+  <div class="day-names">
+    <span ng-repeat="dn in dayNames">
+      <span>{{ dn }}</span>
+    </span>
+  </div>
+  <div class="calendar">
+    <span ng-repeat="d in days">
+      <span class="day" ng-click="selectDate($event, d)" ng-class="{disabled: !d.enabled}">{{ d.day }}</span>
+    </span>
+  </div>
+</div>

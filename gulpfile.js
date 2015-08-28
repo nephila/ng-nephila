@@ -14,6 +14,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 
 var testFiles = [
+  'bower_components/moment/min/moment-with-locales.min.js',
   'bower_components/jquery/dist/jquery.min.js',
   'bower_components/angular/angular.min.js',
   'bower_components/angular-mocks/angular-mocks.js',
