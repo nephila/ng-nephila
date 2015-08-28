@@ -94,7 +94,7 @@ angular.module('ngNephila.components.datePicker', [
         scope.closeCalendar();
       };
 
-      var classList = ['ng-datepicker', 'ng-datepicker-input'];
+      var classList = ['datepicker', 'datepicker-input'];
       if (attrs.id !== undefined) {
         classList.push(attrs.id);
       }
