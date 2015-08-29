@@ -6,6 +6,7 @@ app.config(function(paginationProvider) {
 
 app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
   $scope.myText = 'the last good day of the year';
+  $scope.myHtmlText = '<p>the last <b>good day</b> of the <i>year</i></p>';
   $scope.loadCount = 0;
   $scope.loadingShow = true;
   $scope.scrollContainer = document.getElementById('innerscroll');
