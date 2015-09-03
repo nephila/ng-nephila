@@ -12,6 +12,9 @@
 </head>
 
 <body ng-controller="demoCtrl">
+  <modal show='modalShown'>
+    <p>Modal Content Goes here</p>
+  </modal>
   <div>Titlecase {{myText}} -> {{myText|titlecase}}</div>
   <div>Titlecase {{myText}} -> {{myText|titlecase:true}}</div>
   <div>Html: {{myHtmlText}} -> {{myHtmlText|stripHtml}}</div>

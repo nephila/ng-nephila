@@ -3,5 +3,6 @@ angular.module('ngNephila.components', [
   'ngNephila.components.fallbackImg',
   'ngNephila.components.paginator',
   'ngNephila.components.toggle',
-  'ngNephila.components.datePicker'
+  'ngNephila.components.datePicker',
+  'ngNephila.components.modal'
 ]);
