@@ -12,24 +12,24 @@
 </head>
 
 <body ng-controller="demoCtrl">
-  <modal show='modalShown'>
-    <p>Modal Content Goes here</p>
-  </modal>
   <div>Titlecase {{myText}} -> {{myText|titlecase}}</div>
   <div>Titlecase {{myText}} -> {{myText|titlecase:true}}</div>
   <div>Html: {{myHtmlText}} -> {{myHtmlText|stripHtml}}</div>
-  <div toggle>Toggle Button</div>
   <button ng-click="startSpeaking()">Speak</button>
   <button ng-click="stopSpeaking()">Stop</button>
+  <div toggle>Toggle Button</div>
+  <button ng-click="showModal()">Show modal</button>
+  <modal show='modalShown'>
+    <p>Modal Content Goes here</p>
+  </modal>
   <div>My date {{myDate}}</div>
   <date-picker ng-model="myDate" locale="it" view-format="DD MMMM YYYY"></date-picker>
+  <paginator start="1" compress="2" number-of-items="numberOfItems" on-page-change="pageChange(page)" next-label="Next" prev-label="Prev." compress-label="...."></paginator>
   <div id="innerscroll" style="overflow-y: scroll; height:400px;">
     <infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()" scroll-container="scrollContainer"><div>Loading inside container...</div></infinite-scroll>
   </div>
-  <div class="pagination">
-    <paginator start="1" compress="2" number-of-items="numberOfItems" on-page-change="pageChange(page)" next-label="Next" prev-label="Prev." compress-label="...."></paginator>
-  </div>
   <infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()"><div>Loading inside container...</div></infinite-scroll>
+
 </body>
 
 </html>

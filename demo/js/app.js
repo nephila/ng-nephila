@@ -10,9 +10,13 @@ app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
   $scope.loadCount = 0;
   $scope.loadingShow = true;
   $scope.scrollContainer = document.getElementById('innerscroll');
-  $scope.modalShown = true;
+  $scope.modalShown = false;
 
-  $scope.loadMore = function() {
+  $scope.showModal = function () {
+    $scope.modalShown = true;
+  }
+
+  $scope.loadMore = function () {
     alert("Load more!");
     $scope.loadCount++;
     if ($scope.loadCount==2) {
@@ -20,7 +24,7 @@ app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
     }
   }
 
-  $scope.startSpeaking = function() {
+  $scope.startSpeaking = function () {
     tts.speak("Hi man! How are you? Hope fine!")
     .then(function() {
       console.log("SPEAK DONE!");
@@ -29,15 +33,15 @@ app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
     });
   }
 
-  $scope.stopSpeaking = function() {
+  $scope.stopSpeaking = function () {
     tts.stop();
   }
 
-  $scope.moreDataCanBeLoaded = function() {
+  $scope.moreDataCanBeLoaded = function () {
     return $scope.loadCount < 2;
   }
 
-  $scope.pageChange = function(page) {
+  $scope.pageChange = function (page) {
     $timeout(function() {
       $scope.numberOfItems = 100;
       $scope.loadingShow = false;
