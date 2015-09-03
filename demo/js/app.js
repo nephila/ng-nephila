@@ -10,6 +10,7 @@ app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
   $scope.loadCount = 0;
   $scope.loadingShow = true;
   $scope.scrollContainer = document.getElementById('innerscroll');
+  $scope.modalShown = true;
 
   $scope.loadMore = function() {
     alert("Load more!");
