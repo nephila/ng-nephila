@@ -10,6 +10,11 @@ Collection of reusable components for [AngularJS](https://angularjs.org/)
 
 ## Quick start
 
+Installing via [Bower](bower)
+```
+bower install ng-nephila
+```
+
 Include the required bower component:
 ``` html
 <script src="ng-nephila/ng-nephila.min.js"></script>
