@@ -71,9 +71,22 @@ gulp.task('build-dist', function () {
 });
 
 gulp.task('build', function () {
-  runSequence('clean',
+  return runSequence('clean',
               'html2js',
               'build-dist');
+});
+
+gulp.task('copy-bower', function () {
+  gulp.src(['template/**/*.html']).pipe(gulp.dest('bower_pkg/template'));
+  gulp.src(['dist/**/*']).pipe(gulp.dest('bower_pkg'));
+  gulp.src([
+    'README.md', 'LICENSE', 'bower.json'
+  ]).pipe(gulp.dest('bower_pkg'));
+
+});
+
+gulp.task('pkg-bower', function () {
+  return runSequence('build', 'copy-bower');
 });
 
 gulp.task('jshint', function () {
