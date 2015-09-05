@@ -80,7 +80,7 @@ gulp.task('copy-bower', function () {
   gulp.src(['template/**/*.html']).pipe(gulp.dest('bower_pkg/template'));
   gulp.src(['dist/**/*']).pipe(gulp.dest('bower_pkg'));
   gulp.src([
-    'README.md', 'LICENSE', 'bower.json'
+    'README.md', 'LICENSE'
   ]).pipe(gulp.dest('bower_pkg'));
 
 });
