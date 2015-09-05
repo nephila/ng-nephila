@@ -13,7 +13,8 @@
   "devDependencies": {
     "angular": "^1.4.1",
     "angular-mocks": "^1.4.1",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "moment": "~2.10.6"
   },
   "license": "MIT",
   "ignore": [
@@ -26,8 +27,5 @@
   ],
   "resolutions": {
     "angular": "^1.4.0"
-  },
-  "dependencies": {
-    "moment": "~2.10.6"
   }
 }
