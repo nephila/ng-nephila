@@ -4,5 +4,6 @@ angular.module('ngNephila.components', [
   'ngNephila.components.paginator',
   'ngNephila.components.toggle',
   'ngNephila.components.datePicker',
-  'ngNephila.components.modal'
+  'ngNephila.components.modal',
+  'ngNephila.components.tabsaccordion'
 ]);

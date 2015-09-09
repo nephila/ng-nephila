@@ -19,6 +19,18 @@
   <button ng-click="stopSpeaking()">Stop</button>
   <div toggle>Toggle Button</div>
   <button ng-click="showModal()">Show modal</button>
+
+  <tabsaccordion>
+    <tabheaders>
+      <tabheader selected="true" ref="tab1">Tab 1</tabheader>
+      <tabheader ref="tab2">Tab 2</tabheader>
+    </tabheaders>
+    <tabcontents>
+      <tabcontent ref="tab1">Content 1</tabcontent>
+      <tabcontent ref="tab2">Content 2</tabcontent>
+    </tabcontents>
+  </tabsaccordion>
+
   <modal show='modalShown'>
     <p>Modal Content Goes here</p>
   </modal>
