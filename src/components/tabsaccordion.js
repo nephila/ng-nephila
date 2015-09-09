@@ -2,9 +2,7 @@ angular.module('ngNephila.components.tabsaccordion', [])
 .directive('tabsaccordion', function() {
   return {
     restrict: 'E',
-    scope: {
-      show: '='
-    },
+    scope: {},
     transclude: true,
     replace: true,
     controller: function($scope) {
@@ -44,8 +42,7 @@ angular.module('ngNephila.components.tabsaccordion', [])
 .directive('tabheaders', function() {
   return {
     restrict: 'E',
-    scope: {
-    },
+    scope: {},
     transclude: true,
     replace: true,
     controller: function($scope) {
@@ -60,6 +57,7 @@ angular.module('ngNephila.components.tabsaccordion', [])
 .directive('tabcontents', function() {
   return {
     restrict: 'E',
+    scope: {},
     transclude: true,
     replace: true,
     controller: function($scope) {
@@ -74,14 +72,14 @@ angular.module('ngNephila.components.tabsaccordion', [])
   return {
     scope: {
       ref: '@',
-      selected: '@'
+      selected: '='
     },
     require: '^tabsaccordion',
     restrict: 'E',
     transclude: true,
     replace: true,
     link: function(scope, element, attrs, tabsaccordion) {
-      scope.selected = (scope.selected === 'true');
+      scope.selected = (scope.selected || false);
       tabsaccordion.$scope.setStatus(attrs['ref'], scope.selected);
       tabsaccordion.$scope.setContent(
         attrs['ref'],
