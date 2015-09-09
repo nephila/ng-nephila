@@ -1,6 +1,6 @@
 {
   "name": "ng-nephila",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./ng-nephila.min.js",
   "homepage": "https://github.com/nephila/ng-nephila",
   "authors": [

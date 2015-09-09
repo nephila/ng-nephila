@@ -2,7 +2,7 @@
   "name": "ng-nephila",
   "private": false,
   "main": "dist/ng-nephila",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "url": "git://github.com/nephila/ng-nephila.git"
   },
