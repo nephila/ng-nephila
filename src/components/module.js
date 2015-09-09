@@ -5,5 +5,6 @@ angular.module('ngNephila.components', [
   'ngNephila.components.toggle',
   'ngNephila.components.datePicker',
   'ngNephila.components.modal',
-  'ngNephila.components.tabsaccordion'
+  'ngNephila.components.tabsaccordion',
+  'ngNephila.components.focusMe'
 ]);
