@@ -16,6 +16,9 @@
   <div>Titlecase {{myText}} -> {{myText|titlecase}}</div>
   <div>Titlecase {{myText}} -> {{myText|titlecase:true}}</div>
   <div>Html: {{myHtmlText}} -> {{myHtmlText|stripHtml}}</div>
+  <div>My site: {{'http://mysite' | path:'site' | path:'main'}}</div>
+  <div>API: {{'http://api' | path:'v1' | path:'me.json':true}}</div>
+
   <button ng-click="startSpeaking()">Speak</button>
   <button ng-click="stopSpeaking()">Stop</button>
   <div toggle>Toggle Button</div>
