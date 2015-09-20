@@ -16,7 +16,7 @@ describe('Filter: path', function () {
     expect(pathFilter('http://hello.com/', 'main')).toEqual('http://hello.com/main/');
     expect(pathFilter('http://hello.com', '/main')).toEqual('http://hello.com/main/');
     expect(pathFilter('http://hello.com/', '/main')).toEqual('http://hello.com/main/');
-    expect(pathFilter('http://hello.com/', '//main')).toEqual('http://hello.com/main/');
+    expect(pathFilter('http://hello.com/', '//main/')).toEqual('http://hello.com/main/');
   });
 
   it('should work for relative path', function () {
