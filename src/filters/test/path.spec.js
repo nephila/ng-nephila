@@ -19,6 +19,11 @@ describe('Filter: path', function () {
     expect(pathFilter('http://hello.com/', '//main')).toEqual('http://hello.com/main/');
   });
 
+  it('should work for relative path', function () {
+    expect(pathFilter('/hello', 'main')).toEqual('/hello/main/');
+    expect(pathFilter('/hello', 'main', true)).toEqual('/hello/main');
+  });
+
   it('should respect noTrailingSlash parameter', function () {
     expect(pathFilter('http://hello.com', 'main')).toEqual('http://hello.com/main/');
     expect(pathFilter('http://hello.com/', 'main', true)).toEqual('http://hello.com/main');
