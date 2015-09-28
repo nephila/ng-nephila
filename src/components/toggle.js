@@ -1,6 +1,7 @@
 angular.module('ngNephila.components.toggle',[])
 .directive('toggle', ['$rootScope', function($rootScope) {
   return {
+    restrict: 'AE',
     scope: {
       state: '=',
     },
