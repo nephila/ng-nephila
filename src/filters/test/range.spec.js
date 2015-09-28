@@ -4,7 +4,7 @@ describe('Filter: range', function () {
 
   var range;
   beforeEach(inject(function($filter) {
-    range = $filter('range');
+    range = $filter('nphRange');
   }));
 
   it('has a range filter', function () {

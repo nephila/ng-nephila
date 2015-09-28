@@ -4,7 +4,7 @@ describe('Filter: titlecase', function () {
 
   var titlecase;
   beforeEach(inject(function($filter) {
-    titlecase = $filter('titlecase');
+    titlecase = $filter('nphTitlecase');
   }));
 
   it('has a titlecase filter', function () {

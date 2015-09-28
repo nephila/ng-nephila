@@ -8,7 +8,7 @@ describe('Component: modal', function() {
     $compile = _$compile_;
     $scope = _$rootScope_.$new();
     $timeout = _$timeout_;
-    element = angular.element('<modal show="modalShown"><p>Modal Content Goes here</p></modal>');
+    element = angular.element('<nph-modal show="modalShown"><p>Modal Content Goes here</p></nph-modal>');
   }));
 
   it('should fucking work', function () {

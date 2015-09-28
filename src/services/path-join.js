@@ -1,7 +1,7 @@
 angular.module('ngNephila.services.pathJoin', [
   'ngNephila.filters.path'
 ])
-.factory('pathJoin', function(pathFilter) {
+.factory('nphPathJoin', ['$filter', function($filter) {
   return function() {
     var noTrailingSlash = false;
     var pathArgumentsLength = arguments.length;
@@ -11,11 +11,11 @@ angular.module('ngNephila.services.pathJoin', [
     }
     var str = arguments[0];
     for (var i = 1; i < pathArgumentsLength; i++) {
-      str = pathFilter(str, arguments[i], true);
+      str = $filter('nphPath')(str, arguments[i], true);
     }
     if (!noTrailingSlash) {
       str += '/';
     }
     return str;
   };
-});
+}]);

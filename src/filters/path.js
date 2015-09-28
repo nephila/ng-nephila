@@ -1,5 +1,5 @@
 angular.module('ngNephila.filters.path', [])
-.filter('path', function() {
+.filter('nphPath', function() {
   return function(base, path, noTrailingSlash) {
     var remove = '/';
     while (path.length > 0 && remove.indexOf(path.charAt(0)) != -1) {

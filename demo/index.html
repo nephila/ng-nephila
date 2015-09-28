@@ -13,39 +13,39 @@
 </head>
 
 <body ng-controller="demoCtrl">
-  <div>Titlecase {{myText}} -> {{myText|titlecase}}</div>
-  <div>Titlecase {{myText}} -> {{myText|titlecase:true}}</div>
-  <div>Html: {{myHtmlText}} -> {{myHtmlText|stripHtml}}</div>
-  <div>{{'....My demo....' | strip:'.'}}</div>
-  <div>My site: {{'http://mysite' | path:'site' | path:'main'}}</div>
-  <div>API: {{'http://api' | path:'v1' | path:'me.json':true}}</div>
+  <div>Titlecase {{myText}} -> {{myText|nphTitlecase}}</div>
+  <div>Titlecase {{myText}} -> {{myText|nphTitlecase:true}}</div>
+  <div>Html: {{myHtmlText}} -> {{myHtmlText|nphStripHtml}}</div>
+  <div>{{'....My demo....' | nphStrip:'.'}}</div>
+  <div>My site: {{'http://mysite' | nphPath:'site' | nphPath:'main'}}</div>
+  <div>API: {{'http://api' | nphPath:'v1' | nphPath:'me.json':true}}</div>
   <button ng-click="startSpeaking()">Speak</button>
   <button ng-click="stopSpeaking()">Stop</button>
-  <div toggle>Toggle Button</div>
+  <div nph-toggle>Toggle Button</div>
   <button ng-click="showModal()">Show modal</button>
-  <input focus-me="true"></input>
+  <input nph-focus-me="true"></input>
 
-  <tabsaccordion>
-    <tabheaders>
-      <tabheader selected="true" ref="tab1">Tab 1</tabheader>
-      <tabheader ref="tab2">Tab 2</tabheader>
-    </tabheaders>
-    <tabcontents>
-      <tabcontent ref="tab1">Content 1</tabcontent>
-      <tabcontent ref="tab2">Content 2</tabcontent>
-    </tabcontents>
-  </tabsaccordion>
+  <nph-tabsaccordion>
+    <nph-tabheaders>
+      <nph-tabheader selected="true" ref="tab1">Tab 1</nph-tabheader>
+      <nph-tabheader ref="tab2">Tab 2</nph-tabheader>
+    </nph-tabheaders>
+    <nph-tabcontents>
+      <nph-tabcontent ref="tab1">Content 1</nph-tabcontent>
+      <nph-tabcontent ref="tab2">Content 2</nph-tabcontent>
+    </nph-tabcontents>
+  </nph-tabsaccordion>
 
-  <modal show='modalShown'>
+  <nph-modal show='modalShown'>
     <p>Modal Content Goes here</p>
-  </modal>
+  </nph-modal>
   <div>My date {{myDate}}</div>
-  <date-picker ng-model="myDate" locale="it" view-format="DD MMMM YYYY"></date-picker>
-  <paginator start="1" compress="2" number-of-items="numberOfItems" on-page-change="pageChange(page)" next-label="Next" prev-label="Prev." compress-label="...."></paginator>
+  <nph-date-picker ng-model="myDate" locale="it" view-format="DD MMMM YYYY"></nph-date-picker>
+  <nph-paginator start="1" compress="2" number-of-items="numberOfItems" on-page-change="pageChange(page)" next-label="Next" prev-label="Prev." compress-label="...."></nph-paginator>
   <div id="innerscroll" style="overflow-y: scroll; height:400px;">
-    <infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()" scroll-container="scrollContainer"><div>Loading inside container...</div></infinite-scroll>
+    <nph-infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()" scroll-container="scrollContainer"><div>Loading inside container...</div></nph-nph-infinite-scroll>
   </div>
-  <infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()"><div>Loading inside container...</div></infinite-scroll>
+  <nph-infinite-scroll style="display: block; margin-top: 1200px;" on-infinite="loadMore()"><div>Loading inside container...</div></nph-infinite-scroll>
 </body>
 
 </html>

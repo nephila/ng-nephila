@@ -1,5 +1,5 @@
 angular.module('ngNephila.services.scrolledInContainer', [])
-.factory('scrolledInContainer', function() {
+.factory('nphScrolledInContainer', function() {
   return function(element, container) {
     var elementBox = element.getBoundingClientRect();
     var visible = (!element.style.opacity || element.style.opacity > 0) &&

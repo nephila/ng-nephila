@@ -1,5 +1,5 @@
 angular.module('ngNephila.components.toggle',[])
-.directive('toggle', ['$rootScope', function($rootScope) {
+.directive('nphToggle', ['$rootScope', function($rootScope) {
   return {
     restrict: 'AE',
     scope: {

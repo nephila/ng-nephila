@@ -1,8 +1,8 @@
 angular.module('ngNephila.components.infinitescroll', [
   'ngNephila.services.scrolledInContainer'
 ])
-.directive('infiniteScroll', [
-  '$window', '$rootScope', 'scrolledInContainer', function($window, $rootScope, scrolledInContainer) {
+.directive('nphInfiniteScroll', [
+  '$window', '$rootScope', 'nphScrolledInContainer', function($window, $rootScope, nphScrolledInContainer) {
     return {
       restrict: 'E',
       scope: {
@@ -19,7 +19,7 @@ angular.module('ngNephila.components.infinitescroll', [
           if (scope.ngIf() === false) {
             return;
           }
-          reached = scrolledInContainer(elem[0], container[0]);
+          reached = nphScrolledInContainer(elem[0], container[0]);
           if (reached && !visible) {
             visible = true;
             if (scope.$$phase || $rootScope.$$phase) {

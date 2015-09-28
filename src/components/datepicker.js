@@ -1,7 +1,7 @@
 angular.module('ngNephila.components.datePicker', [
   'ngNephila.tpls.datepicker.datepicker'
 ])
-.directive('datePicker', ['$document', function($document) {
+.directive('nphDatePicker', ['$document', function($document) {
   return {
     restrict: 'E',
     scope: {

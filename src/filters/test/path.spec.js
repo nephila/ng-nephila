@@ -4,7 +4,7 @@ describe('Filter: path', function () {
 
   var pathFilter;
   beforeEach(inject(function($filter) {
-    pathFilter = $filter('path');
+    pathFilter = $filter('nphPath');
   }));
 
   it('has a path filter', function () {

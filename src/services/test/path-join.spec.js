@@ -4,8 +4,8 @@ describe('Service: path-join', function () {
 
   var pathJoin;
 
-  beforeEach(inject(function (_pathJoin_) {
-    pathJoin = _pathJoin_;
+  beforeEach(inject(function (_nphPathJoin_) {
+    pathJoin = _nphPathJoin_;
   }));
 
   it('should fucking work', function () {

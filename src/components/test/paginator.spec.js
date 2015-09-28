@@ -11,8 +11,8 @@ describe('Component: paginator', function() {
   beforeEach(module('ngNephila.components.paginator'));
 
   beforeEach(function(){
-    module(function(paginationProvider){
-      pProvider = paginationProvider;
+    module(function(nphPaginationProvider){
+      pProvider = nphPaginationProvider;
     });
   });
 
@@ -26,7 +26,7 @@ describe('Component: paginator', function() {
     pProvider.setItemsPerPage(5);
     $scope.nitems = 100;
     $scope.pageChange = function(page) {};
-    element = angular.element('<paginator start="1" number-of-items="nitems" on-page-change="pageChange"></paginator>');
+    element = angular.element('<nph-paginator start="1" number-of-items="nitems" on-page-change="pageChange"></nph-paginator>');
     element = $compile(element)($scope);
     $scope.$digest();
     var isolated = element.isolateScope();
@@ -39,7 +39,7 @@ describe('Component: paginator', function() {
     pProvider.setItemsPerPage(5);
     $scope.nitems = 100;
     $scope.pageChange = function(page) {};
-    element = angular.element('<paginator start="1" number-of-items="nitems" on-page-change="pageChange"></paginator>');
+    element = angular.element('<nph-paginator start="1" number-of-items="nitems" on-page-change="pageChange"></nph-paginator>');
     element = $compile(element)($scope);
     $scope.$digest();
     var isolated = element.isolateScope();
@@ -53,7 +53,7 @@ describe('Component: paginator', function() {
     pProvider.setItemsPerPage(5);
     $scope.nitems = 100;
     $scope.pageChange = function(page) {};
-    element = angular.element('<paginator start="1" compress="2" number-of-items="nitems" on-page-change="pageChange"></paginator>');
+    element = angular.element('<nph-paginator start="1" compress="2" number-of-items="nitems" on-page-change="pageChange"></nph-paginator>');
     element = $compile(element)($scope);
     $scope.$digest();
     var isolated = element.isolateScope();
@@ -67,7 +67,7 @@ describe('Component: paginator', function() {
     pProvider.setItemsPerPage(5);
     $scope.nitems = 100;
     $scope.pageChange = function(page) {};
-    element = angular.element('<paginator start="1" compress="2" number-of-items="nitems" on-page-change="pageChange"></paginator>');
+    element = angular.element('<nph-paginator start="1" compress="2" number-of-items="nitems" on-page-change="pageChange"></nph-paginator>');
     element = $compile(element)($scope);
     $scope.$digest();
     var isolated = element.isolateScope();
@@ -83,7 +83,7 @@ describe('Component: paginator', function() {
     pProvider.setItemsPerPage(5);
     $scope.nitems = 100;
     $scope.pageChange = function(page) {};
-    element = angular.element('<paginator start="1" compress="1" number-of-items="nitems" on-page-change="pageChange"></paginator>');
+    element = angular.element('<nph-paginator start="1" compress="1" number-of-items="nitems" on-page-change="pageChange"></nph-paginator>');
     element = $compile(element)($scope);
     $scope.$digest();
     var isolated = element.isolateScope();
@@ -99,7 +99,7 @@ describe('Component: paginator', function() {
     pProvider.setItemsPerPage(5);
     $scope.nitems = 100;
     $scope.pageChange = function(page) {};
-    element = angular.element('<paginator start="1" compress="19" number-of-items="nitems" on-page-change="pageChange"></paginator>');
+    element = angular.element('<nph-paginator start="1" compress="19" number-of-items="nitems" on-page-change="pageChange"></nph-paginator>');
     element = $compile(element)($scope);
     $scope.$digest();
     var isolated = element.isolateScope();
@@ -110,7 +110,7 @@ describe('Component: paginator', function() {
     pProvider.setItemsPerPage(5);
     $scope.nitems = 100;
     $scope.pageChange = function(page) {};
-    element = angular.element('<paginator start="1" compress="2" number-of-items="nitems" on-page-change="pageChange"></paginator>');
+    element = angular.element('<nph-paginator start="1" compress="2" number-of-items="nitems" on-page-change="pageChange"></nph-paginator>');
     element = $compile(element)($scope);
     $scope.$digest();
     var isolated = element.isolateScope();

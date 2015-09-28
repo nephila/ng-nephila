@@ -9,7 +9,7 @@ describe('Component: focus-me', function() {
     $timeout = _$timeout_;
     $scope = _$rootScope_.$new();
     $scope.shouldFocus = false;
-    element = angular.element('<input focus-me="shouldFocus">');
+    element = angular.element('<input nph-focus-me="shouldFocus">');
   }));
 
   it('should fucking work', function () {

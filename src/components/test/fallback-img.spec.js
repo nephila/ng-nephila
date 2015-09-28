@@ -8,7 +8,7 @@ describe('Component: fallback-img', function() {
     $compile = _$compile_;
     $scope = _$rootScope_.$new();
 
-    element = angular.element('<img ng-src="" fallback-img="img/nocover.png">');
+    element = angular.element('<img ng-src="" nph-fallback-img="img/nocover.png">');
 
   }));
 

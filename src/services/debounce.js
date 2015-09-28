@@ -1,5 +1,5 @@
 angular.module('ngNephila.services.debounce', [])
-.factory('debounce', ['$timeout','$q', function($timeout, $q) {
+.factory('nphDebounce', ['$timeout','$q', function($timeout, $q) {
   return function debounce(func, wait, immediate) {
     var timeout;
     var deferred = $q.defer();

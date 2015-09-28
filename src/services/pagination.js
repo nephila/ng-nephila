@@ -1,5 +1,5 @@
 angular.module('ngNephila.services.pagination', [])
-.provider('pagination', function paginationProvider() {
+.provider('nphPagination', function paginationProvider() {
 
   var itemsPerPage = 0;
 

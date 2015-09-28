@@ -1,5 +1,5 @@
 angular.module('ngNephila.filters.strip', [])
-.filter('strip', function() {
+.filter('nphStrip', function() {
   return function(s, ch) {
     ch = (ch || ' ');
     while (s.length > 0 && ch.indexOf(s.charAt(0)) != -1) {

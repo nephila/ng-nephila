@@ -3,8 +3,8 @@ angular.module('ngNephila.components.paginator', [
   'ngNephila.filters.range',
   'ngNephila.tpls.paginator.paginator'
 ])
-.directive('paginator', [
-  '$filter', 'pagination', function($filter, pagination) {
+.directive('nphPaginator', [
+  '$filter', 'nphPagination', function($filter, nphPagination) {
     return {
       restrict: 'E',
       scope: {
@@ -21,9 +21,9 @@ angular.module('ngNephila.components.paginator', [
       },
       controller: ['$scope', function ( $scope ) {
         $scope.pagesVisibility = [];
-        $scope.paginator = pagination.getPaginator();
+        $scope.paginator = nphPagination.getPaginator();
         $scope.paginator.setNumberOfItems(parseInt($scope.numberOfItems));
-        $scope.pages = $filter('range')(1, 1 + $scope.paginator.getNumberOfPages());
+        $scope.pages = $filter('nphRange')(1, 1 + $scope.paginator.getNumberOfPages());
         $scope.calculatePagesVisiblity = function() {
           var compress = parseInt($scope.compress);
           if (!compress) {
@@ -108,7 +108,7 @@ angular.module('ngNephila.components.paginator', [
       link: function(scope, elem, attrs) {
         scope.$watch('numberOfItems', function(newValue, oldValue) {
           scope.paginator.setNumberOfItems(parseInt(newValue));
-          scope.pages = $filter('range')(1, 1 + scope.paginator.getNumberOfPages());
+          scope.pages = $filter('nphRange')(1, 1 + scope.paginator.getNumberOfPages());
           scope.calculatePagesVisiblity();
         });
       }

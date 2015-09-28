@@ -8,16 +8,16 @@ describe('Component: tabsaccordion', function() {
     $compile = _$compile_;
     $scope = _$rootScope_.$new();
     $timeout = _$timeout_;
-    var element_html = '<tabsaccordion>' +
-    '<tabheaders>' +
-    '<tabheader selected="true" ref="tab1"><p>Tab 1</p><div>Tab 1</div></tabheader>' +
-    '<tabheader ref="tab2"><p>Tab 2</p><div>Tab 2</div></tabheader>' +
-    '</tabheaders>' +
-    '<tabcontents>' +
-    '<tabcontent ref="tab1">Content 1</tabcontent>' +
-    '<tabcontent ref="tab2">Content 2</tabcontent>' +
-    '</tabcontents>' +
-    '</tabsaccordion>';
+    var element_html = '<nph-tabsaccordion>' +
+    '<nph-tabheaders>' +
+    '<nph-tabheader selected="true" ref="tab1"><p>Tab 1</p><div>Tab 1</div></nph-tabheader>' +
+    '<nph-tabheader ref="tab2"><p>Tab 2</p><div>Tab 2</div></nph-tabheader>' +
+    '</nph-tabheaders>' +
+    '<nph-tabcontents>' +
+    '<nph-tabcontent ref="tab1">Content 1</nph-tabcontent>' +
+    '<nph-tabcontent ref="tab2">Content 2</nph-tabcontent>' +
+    '</nph-tabcontents>' +
+    '</nph-tabsaccordion>';
     element = angular.element(element_html);
   }));
 

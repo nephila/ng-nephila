@@ -4,7 +4,7 @@ describe('Filter: strip', function () {
 
   var stripFilter;
   beforeEach(inject(function($filter) {
-    stripFilter = $filter('strip');
+    stripFilter = $filter('nphStrip');
   }));
 
   it('has a strip filter', function () {

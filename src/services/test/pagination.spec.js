@@ -6,8 +6,8 @@ describe('Service: pagination', function () {
   var paginatorFactory;
 
   beforeEach(function(){
-    module(function(paginationProvider){
-      pProvider = paginationProvider;
+    module(function(nphPaginationProvider){
+      pProvider = nphPaginationProvider;
       paginatorFactory = pProvider.$get();
     });
   });

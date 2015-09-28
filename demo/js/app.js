@@ -1,10 +1,10 @@
 var app = angular.module('demo', ['ngNephila']);
 
-app.config(function(paginationProvider) {
-  paginationProvider.setItemsPerPage(5);
+app.config(function(nphPaginationProvider) {
+  nphPaginationProvider.setItemsPerPage(5);
 });
 
-app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
+app.controller('demoCtrl', function($scope, $timeout, nphPagination, nphTts) {
   $scope.myText = 'the last good day of the year';
   $scope.myHtmlText = '<p>the last <b>good day</b> of the <i>year</i></p>';
   $scope.loadCount = 0;
@@ -25,7 +25,7 @@ app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
   }
 
   $scope.startSpeaking = function () {
-    tts.speak("Hi man! How are you? Hope fine!")
+    nphTts.speak("Hi man! How are you? Hope fine!")
     .then(function() {
       console.log("SPEAK DONE!");
     }, function(err) {
@@ -34,7 +34,7 @@ app.controller('demoCtrl', function($scope, $timeout, pagination, tts) {
   }
 
   $scope.stopSpeaking = function () {
-    tts.stop();
+    nphTts.stop();
   }
 
   $scope.moreDataCanBeLoaded = function () {

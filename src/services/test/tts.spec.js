@@ -16,9 +16,9 @@ describe('Service: tts', function () {
 
   beforeEach(module('ngNephila.services.tts'));
 
-  beforeEach(inject(function (_tts_, _$timeout_, _$rootScope_) {
+  beforeEach(inject(function (_nphTts_, _$timeout_, _$rootScope_) {
     $rootScope = _$rootScope_;
-    tts = _tts_;
+    tts = _nphTts_;
     $timeout = _$timeout_;
   }));
 

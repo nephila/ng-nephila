@@ -4,8 +4,8 @@ describe('Service: scrolled-in-container', function () {
 
   var scrolledInContainer;
 
-  beforeEach(inject(function (_scrolledInContainer_) {
-    scrolledInContainer = _scrolledInContainer_;
+  beforeEach(inject(function (_nphScrolledInContainer_) {
+    scrolledInContainer = _nphScrolledInContainer_;
   }));
 
   it('should fucking work', function () {

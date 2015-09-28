@@ -4,8 +4,8 @@ describe('Service: debounce', function () {
 
   var debounce, $timeout;
 
-  beforeEach(inject(function (_debounce_,  _$timeout_) {
-    debounce = _debounce_;
+  beforeEach(inject(function (_nphDebounce_,  _$timeout_) {
+    debounce = _nphDebounce_;
     $timeout = _$timeout_;
   }));
 

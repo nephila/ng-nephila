@@ -1,5 +1,5 @@
 angular.module('ngNephila.filters.range', [])
-.filter('range', function(){
+.filter('nphRange', function(){
   return function(start, end, step) {
     var res = [];
     var leftToRight = true;
