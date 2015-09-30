@@ -86,7 +86,7 @@ gulp.task('copy-bower', function () {
 });
 
 gulp.task('pkg-bower', function () {
-  return runSequence('build', 'copy-bower');
+  return runSequence('clean', 'html2js', 'build-dist', 'copy-bower');
 });
 
 gulp.task('jshint', function () {
